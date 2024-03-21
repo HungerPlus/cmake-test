@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/workspaces/cmake-test/add.c
-
 /workspaces/cmake-test/add.h
 
 /workspaces/cmake-test/main.c
