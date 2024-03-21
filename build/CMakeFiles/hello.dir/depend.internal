@@ -4,4 +4,5 @@
 CMakeFiles/hello.dir/add.o
  /workspaces/cmake-test/add.c
 CMakeFiles/hello.dir/main.o
+ /workspaces/cmake-test/add.h
  /workspaces/cmake-test/main.c

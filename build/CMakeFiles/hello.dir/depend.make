@@ -3,5 +3,6 @@
 
 CMakeFiles/hello.dir/add.o: ../add.c
 
+CMakeFiles/hello.dir/main.o: ../add.h
 CMakeFiles/hello.dir/main.o: ../main.c
 
