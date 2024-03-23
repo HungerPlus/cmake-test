@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/cmake-test/build/CMakeFiles /workspaces/cmake-test/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /workspaces/cmake-test/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/cmake-test/build/CMakeFiles /workspaces/cmake-test/build/test1/CMakeFiles/progress.marks
+	cd /workspaces/cmake-test/build && $(MAKE) -f CMakeFiles/Makefile2 test1/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/cmake-test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /workspaces/cmake-test/build && $(MAKE) -f CMakeFiles/Makefile2 test1/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,44 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /workspaces/cmake-test/build && $(MAKE) -f CMakeFiles/Makefile2 test1/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /workspaces/cmake-test/build && $(MAKE) -f CMakeFiles/Makefile2 test1/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspaces/cmake-test/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named app
+# Convenience name for target.
+test1/CMakeFiles/app_hello.dir/rule:
+	cd /workspaces/cmake-test/build && $(MAKE) -f CMakeFiles/Makefile2 test1/CMakeFiles/app_hello.dir/rule
+.PHONY : test1/CMakeFiles/app_hello.dir/rule
 
-# Build rule for target.
-app: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 app
-.PHONY : app
+# Convenience name for target.
+app_hello: test1/CMakeFiles/app_hello.dir/rule
 
-# fast build rule for target.
-app/fast:
-	$(MAKE) -f application/CMakeFiles/app.dir/build.make application/CMakeFiles/app.dir/build
-.PHONY : app/fast
-
-#=============================================================================
-# Target rules for targets named app_hello
-
-# Build rule for target.
-app_hello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 app_hello
 .PHONY : app_hello
 
 # fast build rule for target.
 app_hello/fast:
-	$(MAKE) -f test1/CMakeFiles/app_hello.dir/build.make test1/CMakeFiles/app_hello.dir/build
+	cd /workspaces/cmake-test/build && $(MAKE) -f test1/CMakeFiles/app_hello.dir/build.make test1/CMakeFiles/app_hello.dir/build
 .PHONY : app_hello/fast
+
+test1.o: test1.c.o
+
+.PHONY : test1.o
+
+# target to build an object file
+test1.c.o:
+	cd /workspaces/cmake-test/build && $(MAKE) -f test1/CMakeFiles/app_hello.dir/build.make test1/CMakeFiles/app_hello.dir/test1.c.o
+.PHONY : test1.c.o
+
+test1.i: test1.c.i
+
+.PHONY : test1.i
+
+# target to preprocess a source file
+test1.c.i:
+	cd /workspaces/cmake-test/build && $(MAKE) -f test1/CMakeFiles/app_hello.dir/build.make test1/CMakeFiles/app_hello.dir/test1.c.i
+.PHONY : test1.c.i
+
+test1.s: test1.c.s
+
+.PHONY : test1.s
+
+# target to generate assembly for a file
+test1.c.s:
+	cd /workspaces/cmake-test/build && $(MAKE) -f test1/CMakeFiles/app_hello.dir/build.make test1/CMakeFiles/app_hello.dir/test1.c.s
+.PHONY : test1.c.s
 
 # Help Target
 help:
@@ -144,8 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... app"
 	@echo "... app_hello"
+	@echo "... test1.o"
+	@echo "... test1.i"
+	@echo "... test1.s"
 .PHONY : help
 
 
@@ -157,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspaces/cmake-test/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

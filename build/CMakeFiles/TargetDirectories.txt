@@ -1,3 +1,10 @@
 /workspaces/cmake-test/build/CMakeFiles/rebuild_cache.dir
 /workspaces/cmake-test/build/CMakeFiles/edit_cache.dir
-/workspaces/cmake-test/build/CMakeFiles/hello.dir
+/workspaces/cmake-test/build/application/CMakeFiles/rebuild_cache.dir
+/workspaces/cmake-test/build/application/CMakeFiles/edit_cache.dir
+/workspaces/cmake-test/build/application/CMakeFiles/app.dir
+/workspaces/cmake-test/build/interface/CMakeFiles/rebuild_cache.dir
+/workspaces/cmake-test/build/interface/CMakeFiles/edit_cache.dir
+/workspaces/cmake-test/build/test1/CMakeFiles/rebuild_cache.dir
+/workspaces/cmake-test/build/test1/CMakeFiles/edit_cache.dir
+/workspaces/cmake-test/build/test1/CMakeFiles/app_hello.dir

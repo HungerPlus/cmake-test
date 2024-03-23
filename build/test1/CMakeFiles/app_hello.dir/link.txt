@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/app_hello.dir/test1.c.o  -o ../../bin/app_hello   -L/workspaces/cmake-test/lib  -Wl,-rpath,/workspaces/cmake-test/lib ../../lib/libapp.a 

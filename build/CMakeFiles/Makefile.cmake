@@ -27,9 +27,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake"
   "../CMakeLists.txt"
+  "../application/CMakeLists.txt"
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
+  "../interface/CMakeLists.txt"
+  "../test1/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -41,9 +44,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "application/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "interface/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test1/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/hello.dir/DependInfo.cmake"
+  "application/CMakeFiles/app.dir/DependInfo.cmake"
+  "test1/CMakeFiles/app_hello.dir/DependInfo.cmake"
   )

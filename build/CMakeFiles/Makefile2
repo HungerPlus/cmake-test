@@ -53,46 +53,133 @@ CMAKE_BINARY_DIR = /workspaces/cmake-test/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/hello.dir/all
+all: application/all
+all: interface/all
+all: test1/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: application/preinstall
+preinstall: interface/preinstall
+preinstall: test1/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/hello.dir/clean
+clean: application/clean
+clean: interface/clean
+clean: test1/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/hello.dir
+# Directory level rules for directory application
+
+# Recursive "all" directory target.
+application/all: application/CMakeFiles/app.dir/all
+
+.PHONY : application/all
+
+# Recursive "preinstall" directory target.
+application/preinstall:
+
+.PHONY : application/preinstall
+
+# Recursive "clean" directory target.
+application/clean: application/CMakeFiles/app.dir/clean
+
+.PHONY : application/clean
+
+#=============================================================================
+# Directory level rules for directory interface
+
+# Recursive "all" directory target.
+interface/all:
+
+.PHONY : interface/all
+
+# Recursive "preinstall" directory target.
+interface/preinstall:
+
+.PHONY : interface/preinstall
+
+# Recursive "clean" directory target.
+interface/clean:
+
+.PHONY : interface/clean
+
+#=============================================================================
+# Directory level rules for directory test1
+
+# Recursive "all" directory target.
+test1/all: test1/CMakeFiles/app_hello.dir/all
+
+.PHONY : test1/all
+
+# Recursive "preinstall" directory target.
+test1/preinstall:
+
+.PHONY : test1/preinstall
+
+# Recursive "clean" directory target.
+test1/clean: test1/CMakeFiles/app_hello.dir/clean
+
+.PHONY : test1/clean
+
+#=============================================================================
+# Target rules for target application/CMakeFiles/app.dir
 
 # All Build rule for target.
-CMakeFiles/hello.dir/all:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/depend
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/cmake-test/build/CMakeFiles --progress-num=1,2,3 "Built target hello"
-.PHONY : CMakeFiles/hello.dir/all
+application/CMakeFiles/app.dir/all:
+	$(MAKE) -f application/CMakeFiles/app.dir/build.make application/CMakeFiles/app.dir/depend
+	$(MAKE) -f application/CMakeFiles/app.dir/build.make application/CMakeFiles/app.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/cmake-test/build/CMakeFiles --progress-num=1,2 "Built target app"
+.PHONY : application/CMakeFiles/app.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/hello.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/cmake-test/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/hello.dir/all
+application/CMakeFiles/app.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/cmake-test/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 application/CMakeFiles/app.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/cmake-test/build/CMakeFiles 0
-.PHONY : CMakeFiles/hello.dir/rule
+.PHONY : application/CMakeFiles/app.dir/rule
 
 # Convenience name for target.
-hello: CMakeFiles/hello.dir/rule
+app: application/CMakeFiles/app.dir/rule
 
-.PHONY : hello
+.PHONY : app
 
 # clean rule for target.
-CMakeFiles/hello.dir/clean:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/clean
-.PHONY : CMakeFiles/hello.dir/clean
+application/CMakeFiles/app.dir/clean:
+	$(MAKE) -f application/CMakeFiles/app.dir/build.make application/CMakeFiles/app.dir/clean
+.PHONY : application/CMakeFiles/app.dir/clean
+
+#=============================================================================
+# Target rules for target test1/CMakeFiles/app_hello.dir
+
+# All Build rule for target.
+test1/CMakeFiles/app_hello.dir/all: application/CMakeFiles/app.dir/all
+	$(MAKE) -f test1/CMakeFiles/app_hello.dir/build.make test1/CMakeFiles/app_hello.dir/depend
+	$(MAKE) -f test1/CMakeFiles/app_hello.dir/build.make test1/CMakeFiles/app_hello.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/cmake-test/build/CMakeFiles --progress-num=3,4 "Built target app_hello"
+.PHONY : test1/CMakeFiles/app_hello.dir/all
+
+# Build rule for subdir invocation for target.
+test1/CMakeFiles/app_hello.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/cmake-test/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 test1/CMakeFiles/app_hello.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/cmake-test/build/CMakeFiles 0
+.PHONY : test1/CMakeFiles/app_hello.dir/rule
+
+# Convenience name for target.
+app_hello: test1/CMakeFiles/app_hello.dir/rule
+
+.PHONY : app_hello
+
+# clean rule for target.
+test1/CMakeFiles/app_hello.dir/clean:
+	$(MAKE) -f test1/CMakeFiles/app_hello.dir/build.make test1/CMakeFiles/app_hello.dir/clean
+.PHONY : test1/CMakeFiles/app_hello.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

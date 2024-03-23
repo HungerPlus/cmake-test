@@ -6,11 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/workspaces/cmake-test/add.h
-
-/workspaces/cmake-test/main.c
-stdio.h
--
-add.h
-/workspaces/cmake-test/add.h
-

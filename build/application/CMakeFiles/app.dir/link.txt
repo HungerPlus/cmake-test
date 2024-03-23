@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libapp.a  CMakeFiles/app.dir/task1.c.o
+/usr/bin/ranlib ../../lib/libapp.a
