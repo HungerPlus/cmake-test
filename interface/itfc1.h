@@ -1,0 +1,1 @@
+void Itfc1(void);
