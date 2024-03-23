@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
 PROJECT(hello)
-message(${PROJECT_SOURCE_DIR})
 
 set(CURR_DIR ${PROJECT_SOURCE_DIR})
 set(LIBPATH ${PROJECT_SOURCE_DIR}/lib)

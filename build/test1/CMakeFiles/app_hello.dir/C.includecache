@@ -6,3 +6,13 @@
 
 #IncludeRegexTransform: 
 
+../application/task1.h
+
+../interface/itfc1.h
+
+/workspaces/cmake-test/test1/test1.c
+task1.h
+/workspaces/cmake-test/test1/task1.h
+itfc1.h
+/workspaces/cmake-test/test1/itfc1.h
+
